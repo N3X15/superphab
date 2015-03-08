@@ -8,7 +8,7 @@ Assuming that you have Phabricator installed in /opt/phacility/phabricator:
 
 ```bash
 # Clone the repo
-cd /opt/phacility && git clone https://github.com/N3X15/superphab`
+cd /opt/phacility && git clone https://github.com/N3X15/superphab
 # Copy the phd-daemon wrapper to the Phabricator installation
 cp superphab/phd-daemon-launcher phabricator/
 # Change directory to superphab's install directory
