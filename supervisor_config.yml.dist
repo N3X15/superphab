@@ -1,0 +1,33 @@
+# Copy this to supervisor_config.yml and edit to taste.
+# Use two spaces for indenting.
+paths:
+  outfile: /etc/supervisor/conf.d/phabricator.conf
+  phabricator: /path/to/phabricator
+  piddir: /var/run/phd/pid
+
+daemons:
+  # Example daemon:
+  #DaemonClassName:
+  #  # Linux user to run as
+  #  user: www-data
+  #  # Number of processes to launch (default: 1)
+  #  count: 1
+  #  # Commandline arguments to feed to the daemon. (default: [])
+  #  args:
+  #    - arg 1
+  #    - etc
+   
+  # Defaults.  You may wish to change the user it runs as.
+  PhabricatorRepositoryPullLocalDaemon:  
+    user: www-data
+  PhabricatorTriggerDaemon:  
+    user: www-data
+  PhabricatorTaskmasterDaemon:
+    count: 4  
+    user: www-data
+  # PhabricatorBot IRC bot.  Uncomment to use.
+  #PhabricatorBot:  
+  #  user: www-data
+  #  count: 1
+  #  args:
+  #    - /path/to/phabricator/resources/chatbot/config.json

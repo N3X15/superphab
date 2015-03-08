@@ -1,0 +1,3 @@
+#!/bin/sh
+# Do not edit this.
+./phd-daemon < $1
